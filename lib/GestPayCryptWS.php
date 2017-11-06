@@ -595,6 +595,7 @@ class GestPayCryptWS
         }
 
         // Creo il SoapClient
+        libxml_disable_entity_loader(false);
         $client = new SoapClient($this->getWsdl(), array('stream_context' => $this->context));
         // Chiamo la funzione
         $objectresult = $client->__soapCall("Encrypt", array($this->getEncParams()));
@@ -643,6 +644,7 @@ class GestPayCryptWS
         }
 
         // Creo il SoapClient
+        libxml_disable_entity_loader(false);
         $client = new SoapClient($this->getWsdl(), array('stream_context' => $this->context));
         // Chiamo la funzione
         $objectresult = $client->__soapCall("Decrypt", array($this->getDecParams()));
