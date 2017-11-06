@@ -665,6 +665,8 @@ class GestPayCryptWS
             $this->setShopTransactionID((string) $res->ShopTransactionID);
             $this->setBankTransactionID((string) $res->BankTransactionID);
             $this->setAuthorizationCode((string) $res->AuthorizationCode);
+            $this->setBuyerName((string) $res->Buyer->BuyerName);
+            $this->setBuyerEmail((string) $res->Buyer->BuyerEmail);
             $this->setCurrency((int) $res->Currency);
             $this->setAmount((float) $res->Amount);
             $this->setCustomInfo((string) $res->CustomInfo);
